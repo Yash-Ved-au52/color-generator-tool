@@ -17,7 +17,8 @@ const ColorGenerator = () => {
   };
 
   const handleSetColorFromCode = () => {
-    if (/^#[0-9A-F]{6}$/i.test(colorCode)) {
+    if(/^#[0-9A-F]{6}$/i.test(colorCode))
+    {
       dispatch(setColorFromCode(colorCode));
     } else {
       alert('Please enter a valid hex code (e.g. #FF5733).');
